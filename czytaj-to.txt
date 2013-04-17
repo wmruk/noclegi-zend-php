@@ -1,0 +1,7 @@
+Przykład pochodzi z książki
+Włodzimierza Gajdy pt. "Zend Framework"
+wydanej przez wydawnictwo Helion w 2011 roku.
+
+
+Strona książki w księgarni Helion:      http://helion.pl/ksiazki/zendfr.htm
+Strona domowa książki:                  http://zend-framework.gajdaw.pl

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>application/views/scripts/users/index.phtml</url>
+            <bookmark id="1">
+                <name/>
+                <line>6</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/xampp/htdocs/noclegi/application/controllers/AuthController.php</file>
+        <file>file:/C:/xampp/htdocs/noclegi/application/controllers/UsersController.php</file>
+        <file>file:/C:/xampp/htdocs/noclegi/application/views/scripts/users/index.phtml</file>
+        <file>file:/C:/xampp/htdocs/noclegi/application/forms/DeleteUser.php</file>
+        <file>file:/C:/xampp/htdocs/noclegi/application/forms/Forgotpassword.php</file>
+        <file>file:/C:/xampp/htdocs/noclegi/application/controllers/IndexController.php</file>
+    </open-files>
+</project-private>

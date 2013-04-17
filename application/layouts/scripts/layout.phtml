@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+    <head>
+        <?php echo $this->headTitle($this->tytul) ?>
+        <?php echo $this->headLink() ?>
+        <?php echo $this->headScript() ?>
+        <?php echo $this->headMeta() ?>
+    </head>
+    <body id="index">
+
+        <div id="pojemnik">
+
+            <?php if ($this->identity): ?>
+                <?php if ($this->admin == 1): ?>
+                    <ul id="menu">
+                        <li><a href="<?php echo $this->url(array(), 'stronaglowna') ?>">strona główna</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'setting', 'action' => 'index', 'module' => 'default'), 'default', true) ?>">ustawienia konta</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'ofert', 'action' => 'index', 'module' => 'default'), 'default', true) ?>">edycja tekstów</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'editusers', 'module' => 'default'), 'default', true) ?>">użytkownicy</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'ofert', 'action' => 'index', 'module' => 'default'), 'default', true) ?>">edycja typów i list</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'auth', 'action' => 'logout', 'module' => 'default'), 'default', true) ?>">wyloguj</a></li>
+                    </ul>
+                <?php else: ?>
+                    <ul id="menu">
+                        <li><a href="<?php echo $this->url(array(), 'stronaglowna') ?>">strona główna</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'ofert', 'action' => 'index', 'module' => 'default'), 'default', true) ?>">twoja oferta</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'setting', 'action' => 'index', 'module' => 'default'), 'default', true) ?>">ustawienia konta</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'auth', 'action' => 'logout', 'module' => 'default'), 'default', true) ?>">wyloguj</a></li>
+                    </ul>
+                <?php endif; ?>
+            <?php endif; ?>
+            <div id="tresc">
+
+                <?php echo $this->layout()->content; ?>
+
+            </div>
+        </div>
+
+    </body>
+</html>

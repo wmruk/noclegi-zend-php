@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.10">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <apisDirectory enabled="false"/>
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Kontynent">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="show"/>
+        </controllerFile>
+        <controllerFile controllerName="Panstwo">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="show"/>
+        </controllerFile>
+        <controllerFile controllerName="Auth">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="login"/>
+          <actionMethod actionName="logout"/>
+        </controllerFile>
+        <controllerFile controllerName="ViewUser">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="AuthTrue">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="registered"/>
+          <actionMethod actionName="login"/>
+        </controllerFile>
+        <controllerFile controllerName="Index"/>
+        <controllerFile controllerName="Ofert">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Setting">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="data"/>
+          <actionMethod actionName="userData"/>
+        </controllerFile>
+        <controllerFile controllerName="Users">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Admin">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="editusers"/>
+        </controllerFile>
+      </controllersDirectory>
+      <formsDirectory>
+        <formFile formName="Kontynent"/>
+        <formFile formName="Panstwo"/>
+        <formFile formName="PanstwaKontynentu"/>
+        <formFile formName="Login"/>
+        <formFile formName="Register"/>
+        <formFile formName="Forgotpassword"/>
+        <formFile formName="Changepassword"/>
+        <formFile formName="Data"/>
+        <formFile formName="UserData"/>
+        <formFile formName="Userdata"/>
+        <formFile formName="Ofert"/>
+        <formFile formName="Ofertmore"/>
+        <formFile formName="DeleteUser"/>
+      </formsDirectory>
+      <layoutsDirectory enabled="false"/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Kontynent"/>
+          <dbTableFile dbTableName="Panstwo"/>
+          <dbTableFile dbTableName="User"/>
+        </dbTableDirectory>
+      </modelsDirectory>
+      <modulesDirectory enabled="false"/>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Kontynent">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Panstwo">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Kontynent">
+            <viewScriptFile forActionName="show"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Panstwo">
+            <viewScriptFile forActionName="show"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="login"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="logout"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="ViewUser">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="AuthTrue">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="AuthTrue">
+            <viewScriptFile forActionName="registered"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="AuthTrue">
+            <viewScriptFile forActionName="login"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Ofert">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Setting">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Setting">
+            <viewScriptFile forActionName="data"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Setting">
+            <viewScriptFile forActionName="userData"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="auth">
+            <viewScriptFile forActionName="user"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="auth">
+            <viewScriptFile forActionName="admin"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Users">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Admin">
+            <viewScriptFile forActionName="editusers"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory>
+      <projectProviderFile projectProviderName="user" actionNames="create"/>
+    </projectProvidersDirectory>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testApplicationDirectory>
+        <testApplicationBootstrapFile filesystemName="bootstrap.php"/>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile/>
+          <testApplicationControllerFile/>
+          <testApplicationControllerFile forControllerName="ViewUser">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="AuthTrue">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="registered"/>
+            <testApplicationActionMethod forActionName="login"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Index">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Ofert">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Setting">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="data"/>
+            <testApplicationActionMethod forActionName="userData"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Users">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Admin">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="editusers"/>
+          </testApplicationControllerFile>
+        </testApplicationControllerDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory>
+        <testLibraryBootstrapFile filesystemName="bootstrap.php"/>
+      </testLibraryDirectory>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

@@ -66,6 +66,8 @@
         <formFile formName="Ofert"/>
         <formFile formName="Ofertmore"/>
         <formFile formName="DeleteUser"/>
+        <formFile formName="Editlist"/>
+        <formFile formName="Deletelistregion"/>
       </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>

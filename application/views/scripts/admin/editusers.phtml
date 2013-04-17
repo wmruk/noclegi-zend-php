@@ -1,9 +1,9 @@
 <h3>Lista użytkowników:</h3>
 <table>
     <tr>
-        <th width="200">Nazwa uzytkownika</th>
-        <th width="200">Usuwanie uzytkownika</th>
-        <th width="200">Zmiana uprawnien</th>
+        <th width="200">Nazwa użytkownika</th>
+        <th width="200">Usuwanie użytkownika</th>
+        <th width="200">Zmiana uprawnień</th>
     </tr>
     <?php foreach ($this->getUsers as $value): ?> 
         <tr>
@@ -11,13 +11,13 @@
                 <a href="mailto: <?php echo $value['email'] ?>"><?php echo $value['username'] ?></a>
             </td>
             <td>
-                <a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'deleteuser', 'module' => 'default'), 'default', true) ?>?user_id=<?php echo $value['users_id'] ?>">usun</a>
+                <a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'deleteuser', 'module' => 'default'), 'default', true) ?>?user_id=<?php echo $value['users_id'] ?>">usuń</a>
             </td>
             <td>
                 <?php if ($value['status'] == 0): ?>
-                    uzytkownik | <a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'setadmin', 'module' => 'default'), 'default', true) ?>?user_id=<?php echo $value['users_id'] ?>">administrator</a>
+                    użytkownik | <a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'setadmin', 'module' => 'default'), 'default', true) ?>?user_id=<?php echo $value['users_id'] ?>">administrator</a>
                 <?php else: ?>
-                    <a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'setuser', 'module' => 'default'), 'default', true) ?>?user_id=<?php echo $value['users_id'] ?>">uzytkownik</a> | administrator
+                    <a href="<?php echo $this->url(array('controller' => 'admin', 'action' => 'setuser', 'module' => 'default'), 'default', true) ?>?user_id=<?php echo $value['users_id'] ?>">użytkownik</a> | administrator
                 <?php endif; ?>
             </td>
         </tr>

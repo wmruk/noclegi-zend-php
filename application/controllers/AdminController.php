@@ -71,7 +71,44 @@ class AdminController extends Zend_Controller_Action {
         $select = $users->select()->where('username = ?', $auth->getIdentity());
         $u = $users->fetchRow($select);
         $this->view->admin = $u->status;
+
+        $regionsListTable = new Application_Model_DbTable_Regionlist();
+        $buildingTypeTable = new Application_Model_DbTable_Buildingtype();
+
+        $regionsList = $regionsListTable->fetchAll();
+        $buildingType = $buildingTypeTable->fetchAll();
+
+        $this->view->regionsList = $regionsList;
+        $this->view->buildingType = $buildingType;
+        $this->view->addRegion = new Application_Form_Addlistregion();
+        $this->view->regionList = new Application_Form_Deletelistregion();
+    }
+
+    public function addregionAction() {
+        $form = new Application_Form_Addlistregion();
+        if ($form->isValid($this->getRequest()->getPost())) {
+            $regionTable = new Application_Model_DbTable_Regionlist();
+            $insertData = array(
+                'name' => $form->getValue('newRegion')
+            );
+            $regionTable->insert($insertData);
+
+            return $this->_helper->redirector(
+                            'typelist', 'admin', 'default'
+            );
+        }
+    }
+
+    public function deleteregionAction() {
+        $form = new Application_Form_Deletelistregion();
+        if ($form->isValid($this->getRequest()->getPost())) {
+            $regionTable = new Application_Model_DbTable_Regionlist();
+            $regionTable->delete(array('regionList_id = ?' => $form->getValue('region_id')));
+        }
+
+        return $this->_helper->redirector(
+                        'typelist', 'admin', 'default'
+        );
     }
 
 }
-

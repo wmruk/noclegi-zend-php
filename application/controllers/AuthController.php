@@ -64,12 +64,8 @@ class AuthController extends Zend_Controller_Action {
         $form = new Application_Form_Register();
 
         if ($form->isValid($this->getRequest()->getPost())) {
-
-
             $User = new Application_Model_DbTable_User();
-
             $salt = My_Salt::getSalt();
-
             $dane = array(
                 'username' => $form->getValue('username'),
                 'password' => md5($form->getValue('password') . $salt),

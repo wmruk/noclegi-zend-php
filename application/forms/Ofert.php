@@ -21,10 +21,17 @@ class Application_Form_Ofert extends Zend_Form {
                 )
         );
 
+        $tableBuildingType = new Application_Model_DbTable_Buildingtype();
+        $typeList = array();
+        foreach ($tableBuildingType->getBuildingType() as $value) {
+            $typeList += array($value['buildingType_id'] => $value['type']);
+        }
+
         $this->addElement(
-                'text', 'type', array(
+                'select', 'type', array(
             'label' => 'Typ działalności',
-            'required' => true
+            'required' => true,
+            'multiOptions' => $typeList
                 )
         );
 
@@ -35,10 +42,17 @@ class Application_Form_Ofert extends Zend_Form {
                 )
         );
 
+        $tableRegionList = new Application_Model_DbTable_Regionlist();
+        $regionList = array();
+        foreach ($tableRegionList->getRegionList() as $value) {
+            $regionList += array($value['regionList_id'] => $value['name']);
+        }
+
         $this->addElement(
-                'text', 'region', array(
+                'select', 'region', array(
             'label' => 'Region',
-            'required' => true
+            'required' => true,
+            'multiOptions' => $regionList
                 )
         );
 
@@ -60,6 +74,7 @@ class Application_Form_Ofert extends Zend_Form {
             'wielkopolskie' => 'wielkopolskie',
             'zachodniopomorskie' => 'zachodniopomorskie'
         );
+
 
         $this->addElement(
                 'select', 'province', array(

@@ -10,12 +10,4 @@
             </bookmark>
         </file>
     </editor-bookmarks>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/xampp/htdocs/noclegi/application/controllers/AuthController.php</file>
-        <file>file:/C:/xampp/htdocs/noclegi/application/controllers/UsersController.php</file>
-        <file>file:/C:/xampp/htdocs/noclegi/application/views/scripts/users/index.phtml</file>
-        <file>file:/C:/xampp/htdocs/noclegi/application/forms/DeleteUser.php</file>
-        <file>file:/C:/xampp/htdocs/noclegi/application/forms/Forgotpassword.php</file>
-        <file>file:/C:/xampp/htdocs/noclegi/application/controllers/IndexController.php</file>
-    </open-files>
 </project-private>

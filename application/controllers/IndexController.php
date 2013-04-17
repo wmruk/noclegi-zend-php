@@ -1,16 +1,20 @@
 <?php
 
-class IndexController extends Zend_Controller_Action {
+class IndexController extends Zend_Controller_Action
+{
 
-    public function adminAction() {
+    public function adminAction()
+    {
         
     }
 
-    public function userAction() {
+    public function userAction()
+    {
         
     }
 
-    public function preDispatch() {
+    public function preDispatch()
+    {
         $auth = Zend_Auth::getInstance();
         if (!$auth->hasIdentity()) {
             return $this->_helper->redirector(
@@ -26,13 +30,16 @@ class IndexController extends Zend_Controller_Action {
         $this->view->admin = $u->status;
     }
 
-    public function init() {
+    public function init()
+    {
         /* Initialize action controller here */
     }
 
-    public function indexAction() {
+    public function indexAction()
+    {
         // action body
     }
-
 }
+
+
 

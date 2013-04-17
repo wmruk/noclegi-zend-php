@@ -59,5 +59,19 @@ class AdminController extends Zend_Controller_Action {
         );
     }
 
+    public function typelistAction() {
+        $auth = Zend_Auth::getInstance();
+        if (!$auth->hasIdentity()) {
+            return $this->_helper->redirector(
+                            'index', 'auth', 'default'
+            );
+        }
+        $this->view->identity = $auth->getIdentity();
+        $users = new Application_Model_DbTable_User();
+        $select = $users->select()->where('username = ?', $auth->getIdentity());
+        $u = $users->fetchRow($select);
+        $this->view->admin = $u->status;
+    }
+
 }
 

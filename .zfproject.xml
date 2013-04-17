@@ -11,6 +11,7 @@
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
           <actionMethod actionName="index"/>
+          <actionMethod actionName="typelist"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="Kontynent">
@@ -72,6 +73,8 @@
           <dbTableFile dbTableName="Kontynent"/>
           <dbTableFile dbTableName="Panstwo"/>
           <dbTableFile dbTableName="User"/>
+          <dbTableFile dbTableName="Regionlist"/>
+          <dbTableFile dbTableName="Buildingtype"/>
         </dbTableDirectory>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
@@ -146,6 +149,9 @@
           <viewControllerScriptsDirectory forControllerName="Admin">
             <viewScriptFile forActionName="editusers"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="typelist"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -194,6 +200,7 @@
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Index">
             <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="typelist"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Ofert">
             <testApplicationActionMethod forActionName="index"/>

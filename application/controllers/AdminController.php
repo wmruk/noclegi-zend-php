@@ -75,13 +75,12 @@ class AdminController extends Zend_Controller_Action {
         $regionsListTable = new Application_Model_DbTable_Regionlist();
         $buildingTypeTable = new Application_Model_DbTable_Buildingtype();
 
-        $regionsList = $regionsListTable->fetchAll();
-        $buildingType = $buildingTypeTable->fetchAll();
-
-        $this->view->regionsList = $regionsList;
-        $this->view->buildingType = $buildingType;
+        $this->view->regionsList = $regionsListTable->fetchAll();
+        $this->view->buildingType = $buildingTypeTable->fetchAll();
         $this->view->addRegion = new Application_Form_Addlistregion();
         $this->view->regionList = new Application_Form_Deletelistregion();
+        $this->view->addActivityType = new Application_Form_Addactivitylist();
+        $this->view->activityTypeList = new Application_Form_Deleteactivitylist();
     }
 
     public function addregionAction() {
@@ -104,6 +103,33 @@ class AdminController extends Zend_Controller_Action {
         if ($form->isValid($this->getRequest()->getPost())) {
             $regionTable = new Application_Model_DbTable_Regionlist();
             $regionTable->delete(array('regionList_id = ?' => $form->getValue('region_id')));
+        }
+
+        return $this->_helper->redirector(
+                        'typelist', 'admin', 'default'
+        );
+    }
+
+    public function addactivitytypeAction() {
+        $form = new Application_Form_Addactivitylist();
+        if ($form->isValid($this->getRequest()->getPost())) {
+            $buildingTable = new Application_Model_DbTable_Buildingtype();
+            $insertData = array(
+                'type' => $form->getValue('newActivity')
+            );
+            $buildingTable->insert($insertData);
+
+            return $this->_helper->redirector(
+                            'typelist', 'admin', 'default'
+            );
+        }
+    }
+
+    public function deletetypeAction() {
+        $form = new Application_Form_Deleteactivitylist();
+        if ($form->isValid($this->getRequest()->getPost())) {
+            $activityTypeTable = new Application_Model_DbTable_Buildingtype();
+            $activityTypeTable->delete(array('buildingType_id = ?' => $form->getValue('activity_id')));
         }
 
         return $this->_helper->redirector(

@@ -68,6 +68,8 @@
         <formFile formName="DeleteUser"/>
         <formFile formName="Editlist"/>
         <formFile formName="Deletelistregion"/>
+        <formFile formName="Activitytypelist"/>
+        <formFile formName="Deleteactivitylist"/>
       </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>

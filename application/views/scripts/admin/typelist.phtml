@@ -1,6 +1,14 @@
 <h3>Edycja typów i list:</h3>
 
-
-<h4>Regiony:</h4>
-<?php echo $this->addRegion ?>
-<?php echo $this->regionList ?>
+<table>
+    <tr>
+        <th width="300">Regiony:</th>
+        <td width="300"><?php echo $this->addRegion ?></td>
+        <td><?php echo $this->regionList ?></td>
+    </tr>
+    <tr>
+        <th>Typy działalności:</th>
+        <td width="300"><?php echo $this->addActivityType ?></td>
+        <td><?php echo $this->activityTypeList ?></td>
+    </tr>
+</table>

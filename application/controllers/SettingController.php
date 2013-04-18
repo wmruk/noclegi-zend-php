@@ -50,7 +50,6 @@ class SettingController extends Zend_Controller_Action {
         return $this->_helper->redirector(
                         'index', 'setting', 'default'
         );
-        ///$this->view->form = $form;
     }
 
     public function changepasswordAction() {
@@ -63,8 +62,6 @@ class SettingController extends Zend_Controller_Action {
         $User = new Application_Model_DbTable_User();
         $select = $User->select()->where('username = ?', $auth->getIdentity());
         $u = $User->fetchRow($select);
-
-        //$this->_helper->viewRenderer('changepasswordform');
         $form = new Application_Form_Changepassword();
 
         if ($u && $form->isValid($this->getRequest()->getPost())) {

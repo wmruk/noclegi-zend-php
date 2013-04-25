@@ -84,4 +84,3 @@ class SettingController extends Zend_Controller_Action {
     }
 
 }
-

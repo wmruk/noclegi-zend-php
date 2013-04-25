@@ -79,6 +79,7 @@
           <dbTableFile dbTableName="User"/>
           <dbTableFile dbTableName="Regionlist"/>
           <dbTableFile dbTableName="Buildingtype"/>
+          <dbTableFile dbTableName="Options"/>
         </dbTableDirectory>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>

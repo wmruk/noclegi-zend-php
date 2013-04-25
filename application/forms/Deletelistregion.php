@@ -21,7 +21,7 @@ class Application_Form_Deletelistregion extends Zend_Form {
 
         $this->addElement(
                 'select', 'region_id', array(
-            'label' => 'Regiony:',
+            'label' => 'Wybierz region:',
             'required' => true,
             'multiOptions' => $regionList
                 )

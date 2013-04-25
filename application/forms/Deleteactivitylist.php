@@ -22,7 +22,7 @@ class Application_Form_Deleteactivitylist extends Zend_Form {
 
         $this->addElement(
                 'select', 'activity_id', array(
-            'label' => 'Typy działalności:',
+            'label' => 'Wybierz typ działalności',
             'required' => true,
             'multiOptions' => $activityList
                 )

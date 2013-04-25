@@ -58,8 +58,6 @@ class AuthController extends Zend_Controller_Action {
     }
 
     public function registerAction() {
-
-
         $this->_helper->viewRenderer('registerform');
         $form = new Application_Form_Register();
 
@@ -97,14 +95,11 @@ class AuthController extends Zend_Controller_Action {
 
         if ($form->isValid($this->getRequest()->getPost())) {
 
-
             $User = new Application_Model_DbTable_User();
             $select = $User->select()->where('username = ?', $form->getValue('username'));
             $u = $User->fetchRow($select);
 
-
             $password = My_Salt::randomPassword();
-
             $salt = My_Salt::getSalt();
 
             $u->salt = $salt;
